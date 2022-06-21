@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAB7FE5B286260EC002EFD43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5A286260EC002EFD43 /* AppDelegate.m */; };
+		AAB7FE5E286260EC002EFD43 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5D286260EC002EFD43 /* Document.m */; };
+		AAB7FE61286260EC002EFD43 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE5F286260EC002EFD43 /* Document.xib */; };
+		AAB7FE63286260EE002EFD43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE62286260EE002EFD43 /* Assets.xcassets */; };
+		AAB7FE66286260EE002EFD43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE64286260EE002EFD43 /* MainMenu.xib */; };
+		AAB7FE69286260EE002EFD43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE68286260EE002EFD43 /* main.m */; };
+		AAB7FE74286260EF002EFD43 /* OpenBookReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE73286260EF002EFD43 /* OpenBookReaderTests.m */; };
+		AAB7FE7E286260EF002EFD43 /* OpenBookReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE7D286260EF002EFD43 /* OpenBookReaderUITests.m */; };
+		AAB7FE80286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE7F286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAB7FE70286260EE002EFD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB7FE4E286260EC002EFD43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB7FE55286260EC002EFD43;
+			remoteInfo = OpenBookReader;
+		};
+		AAB7FE7A286260EF002EFD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB7FE4E286260EC002EFD43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB7FE55286260EC002EFD43;
+			remoteInfo = OpenBookReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAB7FE56286260EC002EFD43 /* OpenBookReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBookReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB7FE59286260EC002EFD43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAB7FE5A286260EC002EFD43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAB7FE5C286260EC002EFD43 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		AAB7FE5D286260EC002EFD43 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		AAB7FE60286260EC002EFD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
+		AAB7FE62286260EE002EFD43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAB7FE65286260EE002EFD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AAB7FE67286260EE002EFD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAB7FE68286260EE002EFD43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAB7FE6A286260EE002EFD43 /* OpenBookReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenBookReader.entitlements; sourceTree = "<group>"; };
+		AAB7FE6F286260EE002EFD43 /* OpenBookReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenBookReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB7FE73286260EF002EFD43 /* OpenBookReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookReaderTests.m; sourceTree = "<group>"; };
+		AAB7FE79286260EF002EFD43 /* OpenBookReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenBookReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB7FE7D286260EF002EFD43 /* OpenBookReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookReaderUITests.m; sourceTree = "<group>"; };
+		AAB7FE7F286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookReaderUITestsLaunchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAB7FE53286260EC002EFD43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB7FE6C286260EE002EFD43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB7FE76286260EF002EFD43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAB7FE4D286260EC002EFD43 = {
+			isa = PBXGroup;
+			children = (
+				AAB7FE58286260EC002EFD43 /* OpenBookReader */,
+				AAB7FE72286260EF002EFD43 /* OpenBookReaderTests */,
+				AAB7FE7C286260EF002EFD43 /* OpenBookReaderUITests */,
+				AAB7FE57286260EC002EFD43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAB7FE57286260EC002EFD43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAB7FE56286260EC002EFD43 /* OpenBookReader.app */,
+				AAB7FE6F286260EE002EFD43 /* OpenBookReaderTests.xctest */,
+				AAB7FE79286260EF002EFD43 /* OpenBookReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAB7FE58286260EC002EFD43 /* OpenBookReader */ = {
+			isa = PBXGroup;
+			children = (
+				AAB7FE59286260EC002EFD43 /* AppDelegate.h */,
+				AAB7FE5A286260EC002EFD43 /* AppDelegate.m */,
+				AAB7FE5C286260EC002EFD43 /* Document.h */,
+				AAB7FE5D286260EC002EFD43 /* Document.m */,
+				AAB7FE5F286260EC002EFD43 /* Document.xib */,
+				AAB7FE62286260EE002EFD43 /* Assets.xcassets */,
+				AAB7FE64286260EE002EFD43 /* MainMenu.xib */,
+				AAB7FE67286260EE002EFD43 /* Info.plist */,
+				AAB7FE68286260EE002EFD43 /* main.m */,
+				AAB7FE6A286260EE002EFD43 /* OpenBookReader.entitlements */,
+			);
+			path = OpenBookReader;
+			sourceTree = "<group>";
+		};
+		AAB7FE72286260EF002EFD43 /* OpenBookReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAB7FE73286260EF002EFD43 /* OpenBookReaderTests.m */,
+			);
+			path = OpenBookReaderTests;
+			sourceTree = "<group>";
+		};
+		AAB7FE7C286260EF002EFD43 /* OpenBookReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAB7FE7D286260EF002EFD43 /* OpenBookReaderUITests.m */,
+				AAB7FE7F286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m */,
+			);
+			path = OpenBookReaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAB7FE55286260EC002EFD43 /* OpenBookReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB7FE83286260EF002EFD43 /* Build configuration list for PBXNativeTarget "OpenBookReader" */;
+			buildPhases = (
+				AAB7FE52286260EC002EFD43 /* Sources */,
+				AAB7FE53286260EC002EFD43 /* Frameworks */,
+				AAB7FE54286260EC002EFD43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenBookReader;
+			productName = OpenBookReader;
+			productReference = AAB7FE56286260EC002EFD43 /* OpenBookReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAB7FE6E286260EE002EFD43 /* OpenBookReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB7FE86286260EF002EFD43 /* Build configuration list for PBXNativeTarget "OpenBookReaderTests" */;
+			buildPhases = (
+				AAB7FE6B286260EE002EFD43 /* Sources */,
+				AAB7FE6C286260EE002EFD43 /* Frameworks */,
+				AAB7FE6D286260EE002EFD43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAB7FE71286260EE002EFD43 /* PBXTargetDependency */,
+			);
+			name = OpenBookReaderTests;
+			productName = OpenBookReaderTests;
+			productReference = AAB7FE6F286260EE002EFD43 /* OpenBookReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAB7FE78286260EF002EFD43 /* OpenBookReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB7FE89286260EF002EFD43 /* Build configuration list for PBXNativeTarget "OpenBookReaderUITests" */;
+			buildPhases = (
+				AAB7FE75286260EF002EFD43 /* Sources */,
+				AAB7FE76286260EF002EFD43 /* Frameworks */,
+				AAB7FE77286260EF002EFD43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAB7FE7B286260EF002EFD43 /* PBXTargetDependency */,
+			);
+			name = OpenBookReaderUITests;
+			productName = OpenBookReaderUITests;
+			productReference = AAB7FE79286260EF002EFD43 /* OpenBookReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAB7FE4E286260EC002EFD43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					AAB7FE55286260EC002EFD43 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					AAB7FE6E286260EE002EFD43 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = AAB7FE55286260EC002EFD43;
+					};
+					AAB7FE78286260EF002EFD43 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = AAB7FE55286260EC002EFD43;
+					};
+				};
+			};
+			buildConfigurationList = AAB7FE51286260EC002EFD43 /* Build configuration list for PBXProject "OpenBookReader" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAB7FE4D286260EC002EFD43;
+			productRefGroup = AAB7FE57286260EC002EFD43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAB7FE55286260EC002EFD43 /* OpenBookReader */,
+				AAB7FE6E286260EE002EFD43 /* OpenBookReaderTests */,
+				AAB7FE78286260EF002EFD43 /* OpenBookReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAB7FE54286260EC002EFD43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB7FE63286260EE002EFD43 /* Assets.xcassets in Resources */,
+				AAB7FE61286260EC002EFD43 /* Document.xib in Resources */,
+				AAB7FE66286260EE002EFD43 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB7FE6D286260EE002EFD43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB7FE77286260EF002EFD43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAB7FE52286260EC002EFD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB7FE5E286260EC002EFD43 /* Document.m in Sources */,
+				AAB7FE69286260EE002EFD43 /* main.m in Sources */,
+				AAB7FE5B286260EC002EFD43 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB7FE6B286260EE002EFD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB7FE74286260EF002EFD43 /* OpenBookReaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB7FE75286260EF002EFD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB7FE80286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m in Sources */,
+				AAB7FE7E286260EF002EFD43 /* OpenBookReaderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAB7FE71286260EE002EFD43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAB7FE55286260EC002EFD43 /* OpenBookReader */;
+			targetProxy = AAB7FE70286260EE002EFD43 /* PBXContainerItemProxy */;
+		};
+		AAB7FE7B286260EF002EFD43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAB7FE55286260EC002EFD43 /* OpenBookReader */;
+			targetProxy = AAB7FE7A286260EF002EFD43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAB7FE5F286260EC002EFD43 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAB7FE60286260EC002EFD43 /* Base */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		AAB7FE64286260EE002EFD43 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAB7FE65286260EE002EFD43 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAB7FE81286260EF002EFD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AAB7FE82286260EF002EFD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AAB7FE84286260EF002EFD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenBookReader/OpenBookReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5459V76WQG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenBookReader/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oddlyspecificobjects.OpenBookReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		AAB7FE85286260EF002EFD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenBookReader/OpenBookReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5459V76WQG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenBookReader/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oddlyspecificobjects.OpenBookReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		AAB7FE87286260EF002EFD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5459V76WQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oddlyspecificobjects.OpenBookReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenBookReader.app/Contents/MacOS/OpenBookReader";
+			};
+			name = Debug;
+		};
+		AAB7FE88286260EF002EFD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5459V76WQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oddlyspecificobjects.OpenBookReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenBookReader.app/Contents/MacOS/OpenBookReader";
+			};
+			name = Release;
+		};
+		AAB7FE8A286260EF002EFD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5459V76WQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oddlyspecificobjects.OpenBookReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = OpenBookReader;
+			};
+			name = Debug;
+		};
+		AAB7FE8B286260EF002EFD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5459V76WQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oddlyspecificobjects.OpenBookReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = OpenBookReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAB7FE51286260EC002EFD43 /* Build configuration list for PBXProject "OpenBookReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB7FE81286260EF002EFD43 /* Debug */,
+				AAB7FE82286260EF002EFD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB7FE83286260EF002EFD43 /* Build configuration list for PBXNativeTarget "OpenBookReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB7FE84286260EF002EFD43 /* Debug */,
+				AAB7FE85286260EF002EFD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB7FE86286260EF002EFD43 /* Build configuration list for PBXNativeTarget "OpenBookReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB7FE87286260EF002EFD43 /* Debug */,
+				AAB7FE88286260EF002EFD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB7FE89286260EF002EFD43 /* Build configuration list for PBXNativeTarget "OpenBookReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB7FE8A286260EF002EFD43 /* Debug */,
+				AAB7FE8B286260EF002EFD43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAB7FE4E286260EC002EFD43 /* Project object */;
+}
