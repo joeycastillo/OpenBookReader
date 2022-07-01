@@ -32,9 +32,9 @@ BabelMockDevice::~BabelMockDevice() {
     fclose(this->file);
 }
 
-void BabelMockDevice::begin() {
+bool BabelMockDevice::begin() {
     this->file = fopen(this->filename, "r");
-    BabelDevice::begin();
+    return BabelDevice::begin();
 }
 
 void BabelMockDevice::read(uint32_t addr, void *data, uint32_t len) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA029289286F2F1E00AB8385 /* Paginate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA029287286F2F1E00AB8385 /* Paginate.cpp */; };
 		AAB7FE5B286260EC002EFD43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5A286260EC002EFD43 /* AppDelegate.m */; };
 		AAB7FE5E286260EC002EFD43 /* Document.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5D286260EC002EFD43 /* Document.mm */; };
 		AAB7FE61286260EC002EFD43 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE5F286260EC002EFD43 /* Document.xib */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA029287286F2F1E00AB8385 /* Paginate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Paginate.cpp; sourceTree = "<group>"; };
+		AA029288286F2F1E00AB8385 /* Paginate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Paginate.hpp; sourceTree = "<group>"; };
 		AAB7FE56286260EC002EFD43 /* OpenBookReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBookReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB7FE59286260EC002EFD43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAB7FE5A286260EC002EFD43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				AAB7FE67286260EE002EFD43 /* Info.plist */,
 				AAB7FE68286260EE002EFD43 /* main.m */,
 				AAB7FE6A286260EE002EFD43 /* OpenBookReader.entitlements */,
+				AA029287286F2F1E00AB8385 /* Paginate.cpp */,
+				AA029288286F2F1E00AB8385 /* Paginate.hpp */,
 			);
 			path = OpenBookReader;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB7FE9D286267F3002EFD43 /* BabelTypesetter.cpp in Sources */,
+				AA029289286F2F1E00AB8385 /* Paginate.cpp in Sources */,
 				AAB7FE9A286267F3002EFD43 /* BabelMockDevice.cpp in Sources */,
 				AAB7FE5E286260EC002EFD43 /* Document.mm in Sources */,
 				AAB7FE9B286267F3002EFD43 /* BabelTypesetterCocoa.cpp in Sources */,

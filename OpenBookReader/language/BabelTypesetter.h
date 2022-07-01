@@ -39,14 +39,14 @@ public:
     };
 
     BabelTypesetter();
-    virtual void begin();
+    virtual bool begin();
     /**
      @brief Pure virtual method for drawing a pixel. All glyph drawing methods call this to push pixels.
      @param x pixel's X coordinate
      @param y pixel's Y coordinate
      @param color 16-bit pixel color
     */
-    virtual void drawPixel(int16_t x, int16_t y, uint16_t color) = 0;    ///< Virtual drawPixel() function to draw to the screen/framebuffer/etc, must be overridden in subclass. 
+    virtual void drawPixel(int16_t x, int16_t y, uint16_t color) = 0;    ///< Virtual drawPixel() function to draw to the screen/framebuffer/etc, must be overridden in subclass.
 
     /**
      @brief Virtual method for drawing a rect. You may override this if you have a more efficient implementation.

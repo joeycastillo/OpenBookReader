@@ -43,7 +43,12 @@
 #define BABEL_HEADER_EXTRA_TYPE_MIRRORING_MAPPINGS 4
 
 
-void BabelDevice::begin() {
+bool BabelDevice::begin() {
+    uint16_t val;
+    this->read(BABEL_HEADER_LOC_RESERVED, &val, sizeof(val));
+    if (val != 0) return false;
+    this->read(BABEL_HEADER_LOC_VERSION, &val, sizeof(val));
+    if (val != 1) return false;
     this->read(BABEL_HEADER_LOC_WIDTH, &this->width, sizeof(this->width));
     this->read(BABEL_HEADER_LOC_HEIGHT, &this->height, sizeof(this->height));
     this->read(BABEL_HEADER_LOC_MAXGLYPH, &this->last_codepoint, sizeof(this->last_codepoint));
@@ -80,6 +85,8 @@ void BabelDevice::begin() {
     
     this->info_for_replacement_character = this->fetch_glyph_basic_info(0xFFFD);
     this->extended_info_for_replacement_character = this->fetch_glyph_extended_info(0xFFFD);
+
+    return true;
 }
 
 BABEL_CODEPOINT BabelDevice::get_last_available_codepoint() {
@@ -251,5 +258,5 @@ int16_t BabelDevice::word_wrap_position(BABEL_CODEPOINT *buf, size_t len, bool *
     }
     
     if (wrap_candidate) return wrap_candidate + 1; // if we found a wrap point, return it.
-    else return len; // otherwise, they'll just need to break at the end of the line even though it's in the middle of a word.     
+    else return len; // otherwise, they'll just need to break at the end of the line even though it's in the middle of a word.
 }

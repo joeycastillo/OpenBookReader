@@ -7,14 +7,17 @@
 
 #import "Document.h"
 #import "BabelTypesetterCocoa.h"
+#import "Paginate.hpp"
 
 @interface Document ()
 {
-    int currentPage;
-    int numPages;
+    unsigned long currentPage;
+    unsigned long numPages;
+    BookPaginationHeader header;
 }
 @property (weak) IBOutlet NSImageView *imageView;
-@property (nonatomic, strong) NSString *bookText;
+@property (nonatomic, strong) NSData *bookData;
+@property (nonatomic, strong) NSData *paginationData;
 - (void) updatePage;
 
 @end
@@ -41,10 +44,27 @@
     return @"Document";
 }
 
-
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
-    self.bookText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    self.bookData = data;
+
+    CFDataRef cfBookData = (__bridge CFDataRef)self.bookData;
+    CFDataRef terminator = (__bridge CFDataRef)[@"---\n" dataUsingEncoding:NSUTF8StringEncoding];
+    CFRange rangeOfTerminator = CFDataFind(cfBookData, terminator, CFRangeMake(1, CFDataGetLength(cfBookData) - 1), 0);
+
+    BabelTypesetterCocoa *typesetter = new BabelTypesetterCocoa(NULL);
+    typesetter->begin();
+    CFDataRef paginationData = paginationDataCreate(cfBookData, rangeOfTerminator.location + rangeOfTerminator.length, typesetter->getBabel());
+    self.paginationData = [NSData dataWithData:(__bridge NSMutableData *)paginationData];
+    [self.paginationData getBytes:&(self->header) range:NSMakeRange(0, sizeof(BookPaginationHeader))];
+    CFRelease(paginationData);
+    delete typesetter;
+
     return YES;
+}
+
+- (void) windowControllerDidLoadNib:(NSWindowController *)windowController {
+    NSLog(@"Data: %@", [self.paginationData debugDescription]);
+    [self updatePage];
 }
 
 - (IBAction)previousPage:(id)sender {
@@ -53,7 +73,9 @@
 }
 
 - (IBAction)nextPage:(id)sender {
-    self->currentPage++;
+    if (self->currentPage < self->header.numPages - 1) {
+        self->currentPage++;
+    }
     [self updatePage];
 }
 
@@ -84,14 +106,25 @@
     CGContextSetFillColorWithColor(context, CGColorGetConstantColor(kCGColorWhite));
     CGContextFillRect(context, imgRect);
     
+    BookPage page;
+    [self.paginationData getBytes:&page range:NSMakeRange(self->header.pageStart + sizeof(BookPage) * self->currentPage, sizeof(BookPage))];
+    
     BabelTypesetterCocoa *typesetter = new BabelTypesetterCocoa(context);
     typesetter->begin();
-    typesetter->setLayoutArea(8, 8, 300 - 16, 400 - 32);
+    for(int i = 0; i <= 40; i++) {
+        typesetter->drawFillRect(0, 6 + i * 10, 4 * (i % 10 ? 1 : 2), 1, 1);
+    }
+    typesetter->setLayoutArea(6, 6, 300 - 12, 800 - 26);
     typesetter->setLineSpacing(2);
     typesetter->setParagraphSpacing(8);
     typesetter->setTextColor(1);
     typesetter->setWordWrap(true);
-    typesetter->print([[self.bookText substringFromIndex: 400 * self->currentPage] cStringUsingEncoding:NSUTF8StringEncoding]);
+    NSString *pageText = [[NSString alloc] initWithData:[self.bookData subdataWithRange:NSMakeRange(page.loc, page.len)] encoding:NSUTF8StringEncoding];
+    if ([pageText characterAtIndex:0] == 0x1e) typesetter->setTextSize(2);
+    else typesetter->setTextSize(1);
+    typesetter->print("░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ");
+    typesetter->setLayoutArea(6, 6, 300 - 12, 800 - 26);
+    typesetter->print([pageText cStringUsingEncoding:NSUTF8StringEncoding]);
     delete typesetter;
 
     [NSGraphicsContext restoreGraphicsState];
