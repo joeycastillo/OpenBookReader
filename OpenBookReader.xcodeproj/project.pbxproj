@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AAB7FE5B286260EC002EFD43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5A286260EC002EFD43 /* AppDelegate.m */; };
-		AAB7FE5E286260EC002EFD43 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5D286260EC002EFD43 /* Document.m */; };
+		AAB7FE5E286260EC002EFD43 /* Document.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE5D286260EC002EFD43 /* Document.mm */; };
 		AAB7FE61286260EC002EFD43 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE5F286260EC002EFD43 /* Document.xib */; };
 		AAB7FE63286260EE002EFD43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE62286260EE002EFD43 /* Assets.xcassets */; };
 		AAB7FE66286260EE002EFD43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE64286260EE002EFD43 /* MainMenu.xib */; };
@@ -16,6 +16,12 @@
 		AAB7FE74286260EF002EFD43 /* OpenBookReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE73286260EF002EFD43 /* OpenBookReaderTests.m */; };
 		AAB7FE7E286260EF002EFD43 /* OpenBookReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE7D286260EF002EFD43 /* OpenBookReaderUITests.m */; };
 		AAB7FE80286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE7F286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m */; };
+		AAB7FE8D286263B6002EFD43 /* babel.bin in Resources */ = {isa = PBXBuildFile; fileRef = AAB7FE8C286263B6002EFD43 /* babel.bin */; };
+		AAB7FE9A286267F3002EFD43 /* BabelMockDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE8E286267F2002EFD43 /* BabelMockDevice.cpp */; };
+		AAB7FE9B286267F3002EFD43 /* BabelTypesetterCocoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE90286267F2002EFD43 /* BabelTypesetterCocoa.cpp */; };
+		AAB7FE9C286267F3002EFD43 /* utf8_decode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE93286267F2002EFD43 /* utf8_decode.cpp */; };
+		AAB7FE9D286267F3002EFD43 /* BabelTypesetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE95286267F2002EFD43 /* BabelTypesetter.cpp */; };
+		AAB7FE9E286267F3002EFD43 /* BabelDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAB7FE99286267F2002EFD43 /* BabelDevice.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,7 @@
 		AAB7FE59286260EC002EFD43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAB7FE5A286260EC002EFD43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AAB7FE5C286260EC002EFD43 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
-		AAB7FE5D286260EC002EFD43 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		AAB7FE5D286260EC002EFD43 /* Document.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Document.mm; sourceTree = "<group>"; };
 		AAB7FE60286260EC002EFD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
 		AAB7FE62286260EE002EFD43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAB7FE65286260EE002EFD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -52,6 +58,18 @@
 		AAB7FE79286260EF002EFD43 /* OpenBookReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenBookReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB7FE7D286260EF002EFD43 /* OpenBookReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookReaderUITests.m; sourceTree = "<group>"; };
 		AAB7FE7F286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookReaderUITestsLaunchTests.m; sourceTree = "<group>"; };
+		AAB7FE8C286263B6002EFD43 /* babel.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = babel.bin; sourceTree = "<group>"; };
+		AAB7FE8E286267F2002EFD43 /* BabelMockDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BabelMockDevice.cpp; sourceTree = "<group>"; };
+		AAB7FE8F286267F2002EFD43 /* BabelMockDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabelMockDevice.h; sourceTree = "<group>"; };
+		AAB7FE90286267F2002EFD43 /* BabelTypesetterCocoa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BabelTypesetterCocoa.cpp; sourceTree = "<group>"; };
+		AAB7FE91286267F2002EFD43 /* BabelTypesetterCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabelTypesetterCocoa.h; sourceTree = "<group>"; };
+		AAB7FE93286267F2002EFD43 /* utf8_decode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utf8_decode.cpp; sourceTree = "<group>"; };
+		AAB7FE94286267F2002EFD43 /* BabelDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabelDevice.h; sourceTree = "<group>"; };
+		AAB7FE95286267F2002EFD43 /* BabelTypesetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BabelTypesetter.cpp; sourceTree = "<group>"; };
+		AAB7FE96286267F2002EFD43 /* BabelMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabelMacros.h; sourceTree = "<group>"; };
+		AAB7FE97286267F2002EFD43 /* utf8_decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8_decode.h; sourceTree = "<group>"; };
+		AAB7FE98286267F2002EFD43 /* BabelTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabelTypesetter.h; sourceTree = "<group>"; };
+		AAB7FE99286267F2002EFD43 /* BabelDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BabelDevice.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +120,19 @@
 		AAB7FE58286260EC002EFD43 /* OpenBookReader */ = {
 			isa = PBXGroup;
 			children = (
+				AAB7FE92286267F2002EFD43 /* language */,
+				AAB7FE8E286267F2002EFD43 /* BabelMockDevice.cpp */,
+				AAB7FE8F286267F2002EFD43 /* BabelMockDevice.h */,
+				AAB7FE90286267F2002EFD43 /* BabelTypesetterCocoa.cpp */,
+				AAB7FE91286267F2002EFD43 /* BabelTypesetterCocoa.h */,
 				AAB7FE59286260EC002EFD43 /* AppDelegate.h */,
 				AAB7FE5A286260EC002EFD43 /* AppDelegate.m */,
 				AAB7FE5C286260EC002EFD43 /* Document.h */,
-				AAB7FE5D286260EC002EFD43 /* Document.m */,
+				AAB7FE5D286260EC002EFD43 /* Document.mm */,
 				AAB7FE5F286260EC002EFD43 /* Document.xib */,
-				AAB7FE62286260EE002EFD43 /* Assets.xcassets */,
 				AAB7FE64286260EE002EFD43 /* MainMenu.xib */,
+				AAB7FE62286260EE002EFD43 /* Assets.xcassets */,
+				AAB7FE8C286263B6002EFD43 /* babel.bin */,
 				AAB7FE67286260EE002EFD43 /* Info.plist */,
 				AAB7FE68286260EE002EFD43 /* main.m */,
 				AAB7FE6A286260EE002EFD43 /* OpenBookReader.entitlements */,
@@ -131,6 +155,20 @@
 				AAB7FE7F286260EF002EFD43 /* OpenBookReaderUITestsLaunchTests.m */,
 			);
 			path = OpenBookReaderUITests;
+			sourceTree = "<group>";
+		};
+		AAB7FE92286267F2002EFD43 /* language */ = {
+			isa = PBXGroup;
+			children = (
+				AAB7FE93286267F2002EFD43 /* utf8_decode.cpp */,
+				AAB7FE94286267F2002EFD43 /* BabelDevice.h */,
+				AAB7FE95286267F2002EFD43 /* BabelTypesetter.cpp */,
+				AAB7FE96286267F2002EFD43 /* BabelMacros.h */,
+				AAB7FE97286267F2002EFD43 /* utf8_decode.h */,
+				AAB7FE98286267F2002EFD43 /* BabelTypesetter.h */,
+				AAB7FE99286267F2002EFD43 /* BabelDevice.cpp */,
+			);
+			path = language;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +276,7 @@
 			files = (
 				AAB7FE63286260EE002EFD43 /* Assets.xcassets in Resources */,
 				AAB7FE61286260EC002EFD43 /* Document.xib in Resources */,
+				AAB7FE8D286263B6002EFD43 /* babel.bin in Resources */,
 				AAB7FE66286260EE002EFD43 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAB7FE5E286260EC002EFD43 /* Document.m in Sources */,
+				AAB7FE9D286267F3002EFD43 /* BabelTypesetter.cpp in Sources */,
+				AAB7FE9A286267F3002EFD43 /* BabelMockDevice.cpp in Sources */,
+				AAB7FE5E286260EC002EFD43 /* Document.mm in Sources */,
+				AAB7FE9B286267F3002EFD43 /* BabelTypesetterCocoa.cpp in Sources */,
 				AAB7FE69286260EE002EFD43 /* main.m in Sources */,
+				AAB7FE9C286267F3002EFD43 /* utf8_decode.cpp in Sources */,
+				AAB7FE9E286267F3002EFD43 /* BabelDevice.cpp in Sources */,
 				AAB7FE5B286260EC002EFD43 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
