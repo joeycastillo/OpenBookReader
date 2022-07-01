@@ -110,7 +110,7 @@ CFMutableDataRef paginationDataCreate(CFDataRef bookData, uint64_t textStart, Ba
         }
         printf("yPos = %d\n", yPos);
 
-        if (yPos > pageHeight - 16 - 16) {
+        if (yPos > pageHeight) {
 BREAK_PAGE:
             printf(" Breaking for page %d : %d, %d\n", header.numPages, page.loc, page.len);
             CFDataAppendBytes(paginationData, (const UInt8 *)&page, sizeof(BookPage));
