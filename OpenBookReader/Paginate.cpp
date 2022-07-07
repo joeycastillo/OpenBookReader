@@ -93,7 +93,7 @@ CFMutableDataRef paginationDataCreate(CFDataRef bookData, uint64_t textStart, Ba
             int32_t line_end = babel->word_wrap_position(codepoints, bytesRead, &wrapped, &bytePosition, pageWidth, 1);
             if (bytePosition > 0) {
                 page.len += bytePosition;
-                printf("↲ (%d%zupage length now %d)\n", bytePosition, page.len);
+                printf("↲ (%zu page length now %d)\n", bytePosition, page.len);
                 for(int i = 0; i < bytePosition; i++) printf("^");
                 printf("\n");
                 nextPosition = startPosition + bytePosition;
