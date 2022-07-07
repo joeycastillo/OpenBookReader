@@ -154,13 +154,8 @@ size_t BabelTypesetter::writeCodepoint(BABEL_CODEPOINT codepoint) {
     switch (codepoint) {
         case '\n':
         case '\r':
-            this->cursor.y += ((codepoint == '\n') ? this->paragraphSpacing : (16 * this->textSize + this->lineSpacing));
-            if (this->direction == 1) {
-                this->cursor.x = this->minX;
-            } else {
-                this->cursor.x = this->maxX;
-            }
-            this->hasLastGlyph = false;
+            this->cursor.y += this->paragraphSpacing;
+            this->_carraigeReturn();
             return 1;
         case 0x0f: // shift in
             if (this->bold) {
@@ -247,7 +242,8 @@ size_t BabelTypesetter::writeCodepoints(BABEL_CODEPOINT codepoints[], size_t len
             }
             pos += num_glyphs_to_draw;
             if (write_newline) {
-                retVal += this->writeCodepoint(0x000d); // carriage return (soft wrap)
+                this->cursor.y += 16 * this->textSize + this->lineSpacing;
+                this->_carraigeReturn();
             }
 
             if (this->cursor.y >= this->maxY) break;
@@ -297,4 +293,13 @@ void BabelTypesetter::setLineSpacing(int8_t spacing) {
 
 void BabelTypesetter::setParagraphSpacing(int8_t spacing) {
     this->paragraphSpacing = spacing;
+}
+
+void BabelTypesetter::_carraigeReturn() {
+    if (this->direction == 1) {
+        this->cursor.x = this->minX;
+    } else {
+        this->cursor.x = this->maxX;
+    }
+    this->hasLastGlyph = false;
 }
