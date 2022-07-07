@@ -154,7 +154,7 @@ size_t BabelTypesetter::writeCodepoint(BABEL_CODEPOINT codepoint) {
     switch (codepoint) {
         case '\n':
         case '\r':
-            this->cursor.y += 16 * this->textSize + ((codepoint == '\n') ? this->paragraphSpacing : this->lineSpacing);
+            this->cursor.y += ((codepoint == '\n') ? this->paragraphSpacing : (16 * this->textSize + this->lineSpacing));
             if (this->direction == 1) {
                 this->cursor.x = this->minX;
             } else {
@@ -227,12 +227,15 @@ size_t BabelTypesetter::writeCodepoints(BABEL_CODEPOINT codepoints[], size_t len
             retVal += this->writeCodepoint(codepoints[i]);
         }
     } else {
-        // TODO: make word wrapping a boolean and just use page margins.
         size_t pos = 0;
         while (pos < len) {
             bool write_newline = false;
             bool wrapped = false;
-            int32_t num_glyphs_to_draw = this->babelDevice->word_wrap_position(codepoints + pos, len - pos, &wrapped, this->lineWidth, this->textSize);
+            size_t bytePosition;
+            int32_t num_glyphs_to_draw = this->babelDevice->word_wrap_position(codepoints + pos, len - pos, &wrapped, &bytePosition, this->lineWidth, this->textSize);
+            printf("\n");
+            for(int i = 0; i < bytePosition; i++) printf("^");
+            printf("\n");
             if (num_glyphs_to_draw < 0){
                 num_glyphs_to_draw = (int32_t)(len - pos);
             }

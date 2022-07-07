@@ -132,6 +132,24 @@ public:
     size_t print(const char * utf8String);
 
     /*!
+     @brief Gets the number of codepoints that will fit on the current page, starting from offset.
+     @param codepoints An array of codepoints
+     @param len The number of codepoints in the array
+     @returns the number of codepooints that fit on the page
+     @note This method handles newlines and direction changes, and updates the current cursor position. It might move 8 or 16 pixels to the right, OR it might move to the left side of the next line if the text wrapped. But it could also move to the right side of the next line if the layout direction changed to RTL mode.
+    */
+    size_t codepointsThatFit(BABEL_CODEPOINT codepoints[], size_t len);
+
+    /*!
+     @brief Gets the number of bytes that will fit on the current page, starting from offset.
+     @param codepoints An array of codepoints
+     @param len The number of codepoints in the array
+     @returns the number of codepooints that fit on the page
+     @note This method handles newlines and direction changes, and updates the current cursor position. It might move 8 or 16 pixels to the right, OR it might move to the left side of the next line if the text wrapped. But it could also move to the right side of the next line if the layout direction changed to RTL mode.
+    */
+    size_t bytesThatFit(BABEL_CODEPOINT codepoints[], size_t len);
+
+    /*!
      @brief access to the Babel abstraction, for things like getting glyphs, case mapping, word wrapping, etc.
     */
     /**************************************************************************/

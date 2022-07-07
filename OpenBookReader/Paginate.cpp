@@ -51,7 +51,7 @@ CFMutableDataRef paginationDataCreate(CFDataRef bookData, uint64_t textStart, Ba
     printf("Starting page parsing at %lld\n", textStart);
     pos = textStart;
     const int16_t pageWidth = 288;
-    const int16_t pageHeight = 374;
+    const int16_t pageHeight = 384;
     CFIndex nextPosition = 0;
     bool firstLoop = true;
 
@@ -89,13 +89,16 @@ CFMutableDataRef paginationDataCreate(CFDataRef bookData, uint64_t textStart, Ba
             page.len = line_end;
             goto BREAK_PAGE;
         } else {
-            int32_t line_end = babel->word_wrap_position(codepoints, bytesRead, &wrapped, pageWidth, 1);
-            if (line_end > 0) {
-                printf("wrapped, line end at %d\n", line_end);
-                page.len += line_end;
-                nextPosition = startPosition + line_end;
+            size_t bytePosition;
+            int32_t line_end = babel->word_wrap_position(codepoints, bytesRead, &wrapped, &bytePosition, pageWidth, 1);
+            if (bytePosition > 0) {
+                page.len += bytePosition;
+                printf("↲ (%d%zupage length now %d)\n", bytePosition, page.len);
+                for(int i = 0; i < bytePosition; i++) printf("^");
+                printf("\n");
+                nextPosition = startPosition + bytePosition;
             } else {
-                printf("no wrap, line end at %d\n", bytesRead);
+                printf(" no wrap, line end at %d\n", bytesRead);
                 page.len += bytesRead;
                 nextPosition = startPosition + bytesRead;
             }
@@ -106,13 +109,13 @@ CFMutableDataRef paginationDataCreate(CFDataRef bookData, uint64_t textStart, Ba
             yPos += 16 + 2;
         } else {
             printf(".");
-            yPos += 16 + 8;
+            yPos += 8;
         }
         printf("yPos = %d\n", yPos);
 
-        if (yPos > pageHeight) {
+        if (yPos + 16 > pageHeight) {
 BREAK_PAGE:
-            printf(" Breaking for page %d : %d, %d\n", header.numPages, page.loc, page.len);
+            printf("----------Breaking for page %d : %d, %d\n", header.numPages, page.loc, page.len);
             CFDataAppendBytes(paginationData, (const UInt8 *)&page, sizeof(BookPage));
             header.numPages++;
             yPos = 0;
