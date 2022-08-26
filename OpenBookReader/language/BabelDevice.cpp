@@ -246,8 +246,8 @@ int16_t BabelDevice::word_wrap_position(BABEL_CODEPOINT *buf, size_t len, bool *
             continue;
         }
         
-        if (buf[position_in_string] < 128) printf("%c", buf[position_in_string]);
-        else printf("???");
+//        if (buf[position_in_string] < 128) printf("%c", buf[position_in_string]);
+//        else printf("???");
 
         uint32_t glyph_info = this->fetch_glyph_basic_info(buf[position_in_string]);
         if (BABEL_INFO_GET_LINEBREAK_OPPORTUNITY(glyph_info)) {

@@ -111,9 +111,7 @@
     
     BabelTypesetterCocoa *typesetter = new BabelTypesetterCocoa(context);
     typesetter->begin();
-    for(int i = 0; i <= 40; i++) {
-        typesetter->drawFillRect(0, 6 + i * 10, 4 * (i % 10 ? 1 : 2), 1, 1);
-    }
+//    for(int i = 0; i <= 40; i++) typesetter->drawFillRect(0, 6 + i * 10, 4 * (i % 10 ? 1 : 2), 1, 1);
     typesetter->setLayoutArea(6, 6, 300 - 12, 800 - 26);
     typesetter->setLineSpacing(2);
     typesetter->setParagraphSpacing(8);

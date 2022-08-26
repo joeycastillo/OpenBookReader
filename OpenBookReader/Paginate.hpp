@@ -33,6 +33,14 @@ typedef struct BookRecord {
 
 typedef struct BookPaginationHeader {
     uint64_t magic = 4992030523817504768;   // for identifying the file
+    // TODO: 
+    // version (8)
+    // character width (8)
+    // character height (8)
+    // line spacing (4)
+    // paragraph spacing (4)
+    // page width (16)
+    // page height (16)
     uint32_t numChapters = 0;               // Number of chapter descriptors
     uint32_t numPages = 0;                  // Number of page descriptors
     uint32_t tocStart = 0;                  // Start of chapter descriptors

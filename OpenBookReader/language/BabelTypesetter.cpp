@@ -228,9 +228,9 @@ size_t BabelTypesetter::writeCodepoints(BABEL_CODEPOINT codepoints[], size_t len
             bool wrapped = false;
             size_t bytePosition;
             int32_t num_glyphs_to_draw = this->babelDevice->word_wrap_position(codepoints + pos, len - pos, &wrapped, &bytePosition, this->lineWidth, this->textSize);
-            printf("\n");
-            for(int i = 0; i < bytePosition; i++) printf("^");
-            printf("\n");
+//            printf("\n");
+//            for(int i = 0; i < bytePosition; i++) printf("^");
+//            printf("\n");
             if (num_glyphs_to_draw < 0){
                 num_glyphs_to_draw = (int32_t)(len - pos);
             }
